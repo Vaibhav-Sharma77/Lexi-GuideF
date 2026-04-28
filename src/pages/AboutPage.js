@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// import { Shield, Target, Award, Heart, Zap } from 'lucide-react';
 import { Shield, Users, Target, Award, Heart, Zap } from 'lucide-react';
 
 const AboutPage = () => {
+
   const values = [
     {
       icon: Shield,
@@ -29,6 +29,7 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      
       {/* Hero Section */}
       <section className="gradient-bg text-white py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -52,6 +53,7 @@ const AboutPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -60,31 +62,20 @@ const AboutPage = () => {
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Our Mission
               </h2>
+
               <p className="text-lg text-gray-700 mb-6">
                 In India's rapidly growing economy, MSMEs form the backbone of business. Yet, 
-                complex legal contracts often create barriers to growth, leading to unfavorable 
-                terms and missed opportunities.
+                complex legal contracts often create barriers to growth.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
-                Lexi-Guide bridges this gap by making AI-powered legal analysis accessible to 
-                everyone. We transform legal anxiety into confident action, helping businesses 
-                negotiate better terms and protect their interests.
-              </p>
+
               <div className="flex items-center space-x-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary-600">10K+</div>
                   <div className="text-sm text-gray-600">Contracts Analyzed</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-600">2.5K+</div>
-                  <div className="text-sm text-gray-600">Businesses Protected</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-600">₹5Cr+</div>
-                  <div className="text-sm text-gray-600">Money Saved</div>
-                </div>
               </div>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -94,14 +85,10 @@ const AboutPage = () => {
               <Zap className="w-12 h-12 mb-6" />
               <h3 className="text-2xl font-bold mb-4">Why We Started</h3>
               <p className="text-gray-100 mb-4">
-                "I watched too many small businesses get trapped in unfavorable contracts simply 
-                because they couldn't afford quality legal advice. Technology should level the 
-                playing field."
+                Technology should level the playing field.
               </p>
-              <div className="text-sm opacity-80">
-                - Rajesh Kumar, Founder & CEO
-              </div>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -109,6 +96,7 @@ const AboutPage = () => {
       {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -118,9 +106,6 @@ const AboutPage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Our Values
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              These principles guide everything we do, from product development to customer support.
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -138,12 +123,14 @@ const AboutPage = () => {
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* Technology Section */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -153,26 +140,13 @@ const AboutPage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Powered by Advanced AI
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our technology combines cutting-edge AI with deep legal expertise to deliver 
-              accurate, contextual, and actionable insights.
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                title: 'Google Gemini AI',
-                description: 'Latest generative AI technology for natural language understanding and analysis'
-              },
-              {
-                title: 'Indian Legal Context',
-                description: 'Trained specifically on Indian contract law and MSME requirements'
-              },
-              {
-                title: 'Continuous Learning',
-                description: 'Our AI improves with every analysis, becoming smarter and more accurate'
-              }
+              { title: 'Google Gemini AI', description: 'Latest generative AI technology' },
+              { title: 'Indian Legal Context', description: 'Trained on Indian contract law' },
+              { title: 'Continuous Learning', description: 'Improves with every analysis' }
             ].map((tech, index) => (
               <motion.div
                 key={tech.title}
@@ -189,8 +163,10 @@ const AboutPage = () => {
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
+
     </div>
   );
 };
