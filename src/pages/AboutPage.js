@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Target, Award, Heart, Zap } from 'lucide-react';
+// import { Shield, Target, Award, Heart, Zap } from 'lucide-react';
+import { Shield, Users, Target, Award, Heart, Zap } from 'lucide-react';
 
 const AboutPage = () => {
   const values = [
